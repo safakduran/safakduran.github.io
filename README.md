@@ -1,2 +1,0 @@
-# safakduran.github.io
-a

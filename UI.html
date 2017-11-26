@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="container" style="margin-top:50px;">
+    <div class="row">
+      <div class="col-md-12">
+
+          <div id='cssmenu' >
+              <ul class="alert alert-info">
+                 <li><a href='#' id="satinalinmis">Satın Alınmış Olan Eğitimler</a></li>
+                 <li ><a href='#' id="devameden">Devam Eden Eğitimler</a></li>
+                 <li><a href='#' id="biten">Bitirilmiş Eğitimler</a></li>
+                 <li style="float:right;"><a href='#' id="cikis">Çıkış</a></li>
+              </ul>
+              </div>
+
+      
+      </div>
+      <br>
+      <br>
+<div class="col-md-12">
+    <div class="col-md-12  " id="info">
+<h2>Satın Alınmış Olan Eğitimler</h2>
+
+<hr class="h">
+<p>Satın Alınmış Eğitiminiz Bulunmamaktadır.</p>
+    </div>
+    <div class="col-md-12  " id="success">
+<h2>Devam Eden Eğitimler</h2>
+
+<hr class="h">
+<p>Devam Eden Eğitiminiz Bulunmamaktadır.</p>
+    </div>
+    <div class="col-md-12  " id="danger">
+<h2>Bitirilmiş Eğitimler</h2>
+
+<hr class="h">
+<p>Bitirilmiş Eğitiminiz Bulunmamaktadır.</p>
+    </div>
+</div>
+
+    </div>
+  </div>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    $(function () {
+$("#info").css({
+  "display":"none"
+})
+$("#success").css({
+  "display":"none"
+})
+$("#danger").css({
+  "display":"none"
+})
+
+      $("#satinalinmis").click(function(){
+        
+        $("#success").css({
+          "display":"none"
+        })
+        $("#danger").css({
+          "display":"none"
+        })
+
+        $("#info").css({
+
+          "display":"inline-block",
+          "opacity":"0.0"
+        })
+        $("#info").animate({
+          "opacity":"1.0"
+        },1000)
+
+        
+
+      })
+      $("#devameden").click(function(){
+
+        $("#info").css({
+          "display":"none"
+        })
+        
+        $("#danger").css({
+          "display":"none"
+        })
+
+        $("#success").css({
+          "display":"inline-block",
+          "opacity":"0.0"
+        })
+        $("#success").animate({
+          "opacity":"1.0"
+        },1000)
+
+        
+
+      })
+      $("#biten").click(function(){
+
+        $("#info").css({
+          "display":"none"
+        })
+        $("#success").css({
+          "display":"none"
+        })
+
+        $("#danger").css({
+          "display":"inline-block",
+          "opacity":"0.0"
+        })
+        $("#danger").animate({
+          "opacity":"1.0"
+        },1000)
+
+      })
+      $("#cikis").click(function(){
+        $(document).ready(function(){
+        window.location.href="index.html";
+      })
+      })
+
+      
+    });
+  </script>
+</body>
+
+</html>
